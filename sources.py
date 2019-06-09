@@ -3,10 +3,9 @@ def get_subset():
 
     def get_setting(arr, set_length, choose):
 
-        data = [0] * choose
+        data = [0] * choose     #create temporary data of the set
 
-        output_combination(arr, data, 0,
-                           set_length - 1, 0, choose)
+        output_combination(arr, data, 0,set_length - 1, 0, choose)
 
     def output_combination(arr, data, start, end, index, choose):
         if index == choose:
@@ -23,7 +22,6 @@ def get_subset():
     n = int(input("how many element you want to add?"))
 
     for i in range(n):
-
         elements = input("->")
         set_array.append(elements)
     set_array.sort()
@@ -33,16 +31,16 @@ def get_subset():
     for r in range(n + 1):
         if r == 0:
 
-            print("[]")
+            print("[]")     #empty set
 
         elif r == 1:
 
             for i in range(len(set_array)):
-                print(f'[{set_array[i]}]')
+                print(f'[{set_array[i]}]')      #set involved 1 element
 
         elif r == n:
 
-            print(set_array)
+            print(set_array)    #set involved all elements
         else:
 
             get_setting(set_array, n, r)
