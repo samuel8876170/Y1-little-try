@@ -15,7 +15,7 @@ def check(n):
         main_()
     msg = input('Any other else?')
     if msg.lower() == 'no':
-        print('QAQ Why do you discard me!!')
+        print('Well, see you!!')
         return
     else:
         main_()
