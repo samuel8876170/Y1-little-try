@@ -47,14 +47,14 @@ def get_subset():
 
 
 # =================================================== Next Function =================================================
-def encrypt_by_shift():
+def shift_word_to_right():
     word_set = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
-                'v', 'w', 'x', 'y', 'z']
-    num = input('How many times you want to shift?')
+                'v', 'w', 'x', 'y', 'z']                # set of word
+    num = input('How many times you want to shift forward?')
     try:
         num = int(num)
     except ValueError:
-        print('WTF! That is not an integer!')
+        print('That is not an integer!')
         return
     msg = input('What is your decrypted message?').lower()
     msg_char = list(''.join(msg))
@@ -62,18 +62,18 @@ def encrypt_by_shift():
     for x in range(0, len(msg_char)):
         for y in range(0, len(word_set)):
             if msg_char[x] == word_set[y]:
-                output += word_set[(y+num) % 26]
+                output += word_set[(y+num) % 26]        # shift to right and back to 'a' when (y+num) is over 26
     print(output)
 
 
-def decrypt_by_shift():
+def shift_word_to_left():
     word = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
             'v', 'w', 'x', 'y', 'z']
     num = input('How many times you want to shift back?')
     try:
         num = int(num)
     except ValueError:
-        print('WTF! That is not an integer!')
+        print('That is not an integer!')
         return
     msg = input('What is your encrypted message?').lower()
     msg_char = list(''.join(msg))
