@@ -1,3 +1,5 @@
+# input any number or words , then get the subset of the set of input
+# e.g. input : 1 2 3 ; output : [] [1] [2] [3] [1,2] [1,3] [2,3] [1,2,3]
 def get_subset():
     set_array = []
 
@@ -45,8 +47,8 @@ def get_subset():
 
             get_setting(set_array, n, r)
 
-
 # =================================================== Next Function =================================================
+# shifting words in the input by specific number. e.g. input : abc (shift by adding 3) output : def
 def shift_word_to_right():
     word_set = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
                 'v', 'w', 'x', 'y', 'z']                # set of word
