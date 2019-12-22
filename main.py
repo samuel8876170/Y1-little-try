@@ -32,5 +32,5 @@ def main_():
     check(n)
 
 
-print('Hi , what can I help you? =v=" ')
+print('Hi , what can I help you? :) ')
 main_()
